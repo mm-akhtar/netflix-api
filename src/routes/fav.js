@@ -45,7 +45,7 @@ router.delete("/favs/:id", auth, async (req, res) => {
   try {
     // const fav = await Fav.findByIdAndDelete(req.params.id);
     const fav = await Fav.findOneAndDelete({
-      _id: req.params.id,
+      movieId: req.params.id,
       owner: req.user._id,
     });
     if (!fav) {
