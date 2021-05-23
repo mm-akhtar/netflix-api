@@ -1,7 +1,12 @@
 const mongoose = require("mongoose");
 
 const favSchema = mongoose.Schema({
-  movieId: {
+  img: {
+    type: String,
+    trim: true,
+    required: true,
+  },
+  name: {
     type: String,
     trim: true,
     required: true,
